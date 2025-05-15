@@ -1,8 +1,8 @@
-site_name: 基础医学学习网站
-site_url: https://GuChL9/github.io/site-test/
-site_description: 基础医学学习网站
-repo_name: ZJU-BMS
-repo_url: https://github.com/GuChL9/site-test
+site_name: CSGISBME's BLOG
+site_url: https://MATHJSY/github.io/mathjsy
+site_description: 
+repo_name: JSY
+repo_url: https://github.com/MATHJSY/mathjsy
 edit_uri: tree/master/docs
 
 theme:
@@ -65,13 +65,8 @@ theme:
 
 #导航
 nav:
-  - 专业类课程: 
-    - zhuanye/index.md
-    - 专业模块类: 
-      - zhuanye/zymk/index.md
-      - 交叉性课程:
-        - 医学生物物理学: 
-          - zhuanye/zymk/jcx/yxswwlx/index.md
+  - 首页:
+    - index.md
 
 #搜索功能
 plugins:
@@ -81,10 +76,10 @@ plugins:
 extra:
   social:
     - icon: material/web-check
-      link: https://bms.zju.edu.cn/
+#      link: 
 
 #这个是版权横幅
-copyright: Copyright &copy; 2024-2025 基础医学飞跃手册编委会
+#copyright: Copyright &copy; 2024-2025
 
 
 markdown_extensions:
@@ -99,8 +94,8 @@ markdown_extensions:
   - meta
   
 # 统一设置样式
-extra_css:
-  - css/styles.css
+#extra_css:
+#  - css/styles.css
 
 # 统一开启评论功能
 markdown_extensions:
