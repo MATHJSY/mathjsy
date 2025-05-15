@@ -1,0 +1,114 @@
+site_name: 基础医学学习网站
+site_url: https://GuChL9/github.io/site-test/
+site_description: 基础医学学习网站
+repo_name: ZJU-BMS
+repo_url: https://github.com/GuChL9/site-test
+edit_uri: tree/master/docs
+
+theme:
+  logo: images/logo_white.png
+  name: material
+  language: 'zh'
+#  logo: images/ZJUBMS.png
+  favicon: images/ZJUBMS.png
+
+  #主题切换
+  palette:
+
+    # 日间模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # 夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
+  
+
+
+  features:
+    - content.code.annotate
+    - content.action.edit
+    - navigation.instant
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+# 顶部导航栏
+    - navigation.tabs
+    - navigation.tracking
+# 返回顶部按钮
+    - navigation.top
+# 章节索引页面
+    - navigation.indexes
+# 静态导航栏
+#    - navigation.tabs.sticky
+# 自动展开左侧列表
+#    - navigation.sections
+# 激活导航路径后，痕迹导航将呈现在每个页面的标题上方，这可能会使用户在屏幕较小的设备上访问您的文档时更容易找到方向。将以下行添加到
+    - navigation.path
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+    - content.code.annotate    
+    - content.action.edit
+
+  custom_dir: overrides
+
+
+#导航
+nav:
+  - 专业类课程: 
+    - zhuanye/index.md
+    - 专业模块类: 
+      - zhuanye/zymk/index.md
+      - 交叉性课程:
+        - 医学生物物理学: 
+          - zhuanye/zymk/jcx/yxswwlx/index.md
+
+#搜索功能
+plugins:
+  - search
+
+#这个地方是页面最下方放友情链接的，需要一个图标icon和一个链接link
+extra:
+  social:
+    - icon: material/web-check
+      link: https://bms.zju.edu.cn/
+
+#这个是版权横幅
+copyright: Copyright &copy; 2024-2025 基础医学飞跃手册编委会
+
+
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - meta
+  
+# 统一设置样式
+extra_css:
+  - css/styles.css
+
+# 统一开启评论功能
+markdown_extensions:
+
+
+# 添加 MathJax
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  comments: true

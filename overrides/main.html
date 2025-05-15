@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+    {{ super() }}
+    <!-- 添加 MathJax 支持 -->
+    <script type="text/javascript">
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']], // 行内公式语法
+                displayMath: [['$$', '$$'], ['\$', '\$']] // 块级公式语法
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+            script.async = true;
+            script.onload = function() {
+                MathJax.typesetPromise().then(() => {
+                    console.log('MathJax formulas rendered');
+                }).catch((err) => console.error(err));
+            };
+            document.head.appendChild(script);
+        });
+    </script>
+{% endblock %}
